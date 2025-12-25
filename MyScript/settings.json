@@ -1,0 +1,63 @@
+{
+    "workbench.startupEditor": "none",
+    "workbench.iconTheme": "material-icon-theme",
+    "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true,
+    "editor.fontSize": 12,
+    "terminal.integrated.fontSize": 12,
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    },
+    "json.format.keepLines": true,
+    "explorer.sortOrder": "type",
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.db": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.s3db": "${capture}.${extname}-*"
+    },
+    "settingsSync.ignoredSettings": [
+
+    ],
+    "workbench.colorCustomizations": {
+    // アクティビティバー
+    "activityBar.background": "#021d5269", // アクティビティバーの背景色
+    "activityBar.foreground": "#ffffff", // アクティビティバーの前景色
+    "activityBar.border": "#646464", // アクティビティバーの境界線
+    // サイドバー
+    "sideBarSectionHeader.background": "#373746", // サイドバーセクションヘッダーの背景色
+    "sideBarSectionHeader.border": "#8db3ff46", // サイドバーセクションヘッダーの境界線の色
+    "sideBar.background": "#292931", // サイドバーの背景色
+    "sideBar.foreground": "#a0a0a0", // サイドバーの前景色
+    "sideBar.border": "#646464", // サイドバーの境界線
+    "list.activeSelectionBackground": "#2c88d377", // アクティブな状態のセクションの背景色
+    "list.focusBackground": "#2c88d377", // フォーカス状態のセクションの背景色
+    "list.hoverBackground": "#193c5877", //ホバー状態のセクションの背景色
+    // ヘッダー、タブ
+    "editorGroupHeader.tabsBackground": "#2929316e", // ヘッダーの背景色
+    "tab.activeBackground": "#0319464f", // アクティブタブの背景色
+    "tab.border": "#8db3ff46", // タブの横線
+    "tab.inactiveBackground": "#2929316e", // 非選択タブの背景色
+    // エディター
+    "editor.selectionBackground": "#cc25a265", // 選択領域の強調色
+    "editor.lineHighlightBackground": "#9e99ee11", // 選択している行の強調色
+    "editorLineNumber.foreground": "#a2bdddbb", // 選択行番号の文字色
+    "editorBracketMatch.background": "#2c88d377", // 対応する括弧の背景色
+    // ステータスバー
+    "statusBar.background": "#23468b", // ステータスバー背景色
+    "statusBar.foreground": "#ffffff", // ステータスバー前景色
+    "statusBar.border": "#646464", // ステータスバー前景色
+    // スクロールバー
+    "scrollbarSlider.background": "#0d478a99", // スクロールバーの色
+    // walcomeページ
+    "welcomePage.background": "#2231419c"
+    }
+}
