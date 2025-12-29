@@ -1,6 +1,44 @@
 import subprocess
 from pathlib import Path
+import tkinter as tk
+from tkinter import filedialog
 
+import os
+
+
+# --- 代入するファイルをダイアログで指定する -----------------------------------
+def select_input_file():
+    root = tk.Tk()
+    root.withdraw()  # 余計なウィンドウを表示しない
+
+    file_path = filedialog.askopenfilename(
+        title="音楽ファイルを選択",
+        filetypes=[("MP3 files", "*.mp3"), ("All files", "*.*")]
+    )
+    return file_path
+
+
+# --- 代入するファイルのバリデーションチェック -----------------------------------
+def check_is_music(file_path: str) -> bool:
+    """
+    後工程に渡してよい音楽ファイルかどうかを判定する
+    """
+    if not file_path:
+        return False
+
+    if not os.path.isfile(file_path):
+        return False
+
+    music_extensions = {
+        ".mp3", ".wav", ".flac", ".aac",
+        ".ogg", ".m4a", ".wma", ".aiff"
+    }
+
+    _, ext = os.path.splitext(file_path)
+    return ext.lower() in music_extensions
+
+
+# --- フェードイン加工 -----------------------------------
 def create_fadein_music(
     input_path: str,
     prefix: str = "fadein_",
@@ -28,7 +66,8 @@ def create_fadein_music(
 
         "-map", "0:a:0",
         "-af", 
-        f"afade=t=in:curve=log:st=0:d={fade_in_sec}",
+        # f"afade=t=in:curve=log:st=0:d={fade_in_sec}",
+        "afade=t=in:curve=tri:st=0:d=10",
 
         *codec_args,
         str(output_path)
@@ -38,12 +77,26 @@ def create_fadein_music(
     return output_path
 
 
+# ==================================================================
+# === MAIN =========================================================
+# ==================================================================
+def main():
 
-input_path = r"D:\Download\■TODO_PORN■\WORKbench\A New Morning.mp3"
+    input_path = select_input_file()
+
+    is_music = check_is_music(input_path)
+    if not is_music:
+        return ("音楽ファイルを参照してね")
 
 
-output = create_fadein_music(
-    input_path
-)
+    output = create_fadein_music(
+        input_path
+    )
 
-print(output)
+    print(output)
+
+
+# ==================================================================
+if __name__ == "__main__":
+    main()
+
