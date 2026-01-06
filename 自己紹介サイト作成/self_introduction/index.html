@@ -4,68 +4,93 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taro Shuro's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
-      <h1><span>T</span>aro Shuro's Portfolio</h1>
-      <ul>
-        <li><a href="#self-intro">自己紹介</a></li>
-        <li><a href="#sample">実装サンプル</a></li>
+      <h1 class="float-h1 font-white"><span class="heading-taro">T</span>aro Shuro's Portfolio</h1>
+      <ul class="float-h1 inner ul-nodot">
+        <li class="item font-white"><a href="#self-intro">自己紹介</a></li>
+        <li class="item font-white"><a href="#sample">実装サンプル</a></li>
       </ul>
-      <div class="clear"></div>
-      <!-- floatでなんやかんやするやつ-->
-      <img
-        src=".\images\main.jpg"
-        alt="Taro Shuro's Portfolio"
-        width="100px"
-        height="20px"
-      />
+      <div class="clear"></div><!-- floatここまで -->
     </header>
     <main>
-      <section class="features">
-        <div class="">
-          <h2>自己紹介 Self Introduction</h2>
-          私の名前は就労太郎です。アメリカ合衆国出身で現在はディーキャリアITエキスパートにて、プログラミング学習に取り組んでおります。
-          どうぞよろしくお願いいたします。
-        </div>
-        <div class="">
-          <!-- flexで実装 -->
+      <div class="main_img">
+        <img
+          src=".\images\main.jpg"
+          alt="Taro Shuro's Portfolio"
+          width="100px"
+          height="20px"
+        />
+      </div>
+      <div class="container">
+        <section class="section">
           <div class="">
-            <h3>好きなもの・趣味 Favorites</h3>
-            <ul>
-              <li>・スポーツ観戦</li>
-              <li>・読書</li>
-              <li>・アウトドア</li>
-            </ul>
+            <h2>自己紹介 Self Introduction</h2>
+            私の名前は就労太郎です。アメリカ合衆国出身で現在はディーキャリアITエキスパートにて、プログラミング学習に取り組んでおります。
+            どうぞよろしくお願いいたします。
           </div>
           <div class="">
-            <h3>Webサイト Web Sites</h3>
-            <ul>
-              <li>・ディーキャリア</li>
-              <li>・Google</li>
-              <li>・Yahoo! Japan</li>
-            </ul>
+            <!-- flexで実装 -->
+            <div class="">
+              <h3>好きなもの・趣味 Favorites</h3>
+              <ul>
+                <li>・スポーツ観戦</li>
+                <li>・読書</li>
+                <li>・アウトドア</li>
+              </ul>
+            </div>
+            <div class="">
+              <h3>Webサイト Web Sites</h3>
+              <ul>
+                <li>・ディーキャリア</li>
+                <li>・Google</li>
+                <li>・Yahoo! Japan</li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="features">
-        <h2>実装サンプル Sample</h2>
-        <div class="">
-          <h3>画像ギャラリー</h3>
-          <div class=""> <!-- flexで実装-->
-            <ul>
-              <li>宇宙飛行士と月 幻想的な色彩の月と雲の前に、宇宙飛行士が立っています。</li>
-              <li>朝日と石 積み重ねられた石を、朝日が照らしています。</li>
-              <li>鏡のような湖 空と海がどちらかわからなくなるような、鏡のような湖です。</li>
-              <li>ハートの風船 青空をバックに、たくさんの色とりどりのハートの風船が浮いています。</li>
-            </ul>
+        </section>
+        <section class="section">
+          <h2>実装サンプル Sample</h2>
+          <div class="">
+            <h3>画像ギャラリー</h3>
+            <div class="">
+              <!-- flexで実装-->
+              <ul>
+                <li>
+                  <h4>宇宙飛行士と月</h4>
+                  幻想的な色彩の月と雲の前に、宇宙飛行士が立っています。
+                </li>
+                <li>
+                  <h4>朝日と石</h4>
+                  積み重ねられた石を、朝日が照らしています。</li>
+                <li>
+                  <h4>鏡のような湖</h4>
+                  空と海がどちらかわからなくなるような、鏡のような湖です。
+                </li>
+                <li>
+                  <h4>ハートの風船</h4>
+                  青空をバックに、たくさんの色とりどりのハートの風船が浮いています。
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="features">
-        <div class="">セクション３</div>
-      </section>
+        </section>
+        <section class="section">
+          <h3 class="">お問い合わせフォーム</h3>
+          必須名前
+          必須メールアドレス
+          必須年齢
+          必須お問い合わせ内容
+          送信
+        </section>
+        <section class="section">
+          <h3 class="">JavaScript課題</h3>
+            実行
+        </section>
+      </div>
     </main>
-    <footer class="site-footer">フッター</footer>
+    <footer class="site-footer">Copyright © 2022 Taro Shuro</footer>
   </body>
 </html>

@@ -1,0 +1,45 @@
+/*************** main ***************/
+/*************** footer ***************/
+/***************  ***************/
+/***************  ***************/
+/***************  ***************/
+
+/*************** 汎用スタイル部分 ***************/
+.font-white {
+  color: #fff;
+}
+
+.inner {
+  display: flex;
+}
+
+.item {
+
+  background: #ddd;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.ul-nodot {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*************** header ***************/
+header {
+  background-color: #000000cc;
+}
+
+.heading-taro {
+  color: #a6acff;
+}
+
+.float-h1 {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
