@@ -1,10 +1,41 @@
-/*************** main ***************/
 /*************** footer ***************/
 /***************  ***************/
 /***************  ***************/
 /***************  ***************/
 
-/*************** 汎用スタイル部分 ***************/
+/*************** 汎用部分 ***************/
+html {
+    letter-spacing: 0.05em;
+}
+
+
+
+/*************** header ***************/
+header {
+  background-color: #000000cc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.heading-taro {
+  color: #a6acff;
+}
+
+
+.float-h1-left {
+  float: left;
+}
+
+.float-h1-right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
 .font-white {
   color: #fff;
 }
@@ -13,33 +44,31 @@
   display: flex;
 }
 
-.item {
-
-  background: #ddd;
+.float-h1-item {
+  color: #FFF;
   margin-right: 10px;
   text-align: center;
   line-height: 100px;
 }
 
 .ul-nodot {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/*************** main ***************/
+
+.main_img {
+  height: 40vh;
+
+  /* 背景画像を表示 */
+  background-image: url("./images/main.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-/*************** header ***************/
-header {
-  background-color: #000000cc;
-}
+.container {
+  max-width: 1024px;
 
-.heading-taro {
-  color: #a6acff;
-}
-
-.float-h1 {
-  float: left;
-}
-
-.clear {
-  clear: both;
 }
