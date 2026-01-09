@@ -1,13 +1,65 @@
-/*************** footer ***************/
-/***************  ***************/
 /***************  ***************/
 /***************  ***************/
 
 /*************** 汎用部分 ***************/
 html {
-    letter-spacing: 0.05em;
+  letter-spacing: 0.05em;
+  font-size: 16px;
 }
 
+body {
+  margin: 0;
+}
+
+.link-reset {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  color: #fff;
+  font-size: clamp(20px, 5vw, 26px);
+}
+
+h2 {
+  color: #4b52a7;
+}
+
+.h2-title {
+  line-height: 1.2;
+}
+
+.h2-title span {
+  display: block;
+}
+
+.heading-main {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.heading-sub {
+  font-size: 0.8em;
+  margin-top: 0.25em;
+  letter-spacing: 0.1em;
+}
+
+h3 {
+  color: #32839c;
+}
+
+.h3-self {
+  color: red;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+●hのスタイルをmainとsubのスタイルをまとめる
 
 
 /*************** header ***************/
@@ -23,52 +75,70 @@ header {
   color: #a6acff;
 }
 
-
 .float-h1-left {
   float: left;
 }
 
-.float-h1-right {
-  float: right;
+header ul {
+  display: none;
 }
 
 .clear {
   clear: both;
 }
 
-.font-white {
-  color: #fff;
-}
-
-.inner {
-  display: flex;
-}
-
-.float-h1-item {
-  color: #FFF;
-  margin-right: 10px;
-  text-align: center;
-  line-height: 100px;
-}
-
-.ul-nodot {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
 /*************** main ***************/
-
 .main_img {
-  height: 40vh;
+  height: 100vh;
 
   /* 背景画像を表示 */
-  background-image: url("./images/main.jpg");
+  background-image: url("./images/main_sp.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  max-width: 100%;
 }
 
 .container {
+  width: 90%;
   max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+}
 
+.img-self {
+  max-width: 100%;
+  height: auto;
+}
+
+.p-left {
+  white-space: pre-line;
+  text-align: left;
+}
+
+/*************** footer ***************/
+
+/*************** メディアサイズ ***************/
+@media (min-width: 769px) {
+  /* main画像切り替え */
+  .main_img {
+    background-image: url("./images/main.jpg");
+    height: 40vh;
+  }
+
+  /* headerコンテンツ切り替え */
+  .float-h1-right {
+    float: right;
+  }
+
+  .inner {
+    display: flex;
+  }
+
+  .li-header {
+    color: #fff;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 100px;
+  }
 }
