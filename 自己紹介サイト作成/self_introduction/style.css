@@ -1,17 +1,28 @@
 /*************** 汎用部分 ***************/
+
+/***** ノーマライズ ここから *****/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   letter-spacing: 0.05em;
   font-size: 16px;
-}
-
-body {
-  margin: 0;
 }
 
 .link-reset {
   text-decoration: none;
   color: inherit;
 }
+/***** ノーマライズ ここまで *****/
 
 ul {
   list-style: none;
@@ -22,7 +33,6 @@ ul {
 .flex {
   display: flex;
 }
-
 
 /***** 見出しタグ ここから *****/
 h1 {
@@ -40,7 +50,7 @@ h3 span {
 }
 
 h3 {
-  color: #32839C;
+  color: #32839c;
 }
 
 .h3-title {
@@ -48,18 +58,38 @@ h3 {
 }
 
 .h3-borderbottom {
-  border-bottom: 1px solid #B7B7B7;
+  border-bottom: 1px solid #b7b7b7;
 }
 
 h4 {
-  background-color: #758BAF;
-  color: #FFF;
+  background-color: #758baf;
+  color: #fff;
   margin: 0;
   font-weight: normal;
+  font-size: 14px;
+}
+/***** 見出しタグ ここまで *****/
+
+/***** ボタン共通 ここから *****/
+.form-submit {
+  margin: 20px 0 50px;
 }
 
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
 
-/***** 見出しタグ ここまで *****/
+  background-color: #8ab3dc;
+  border: none;
+  border-radius: 4px;
+
+  box-shadow: 0 4px 0 #818694;
+}
+
+/***** ボタン共通 ここまで *****/
 
 /*************** header ***************/
 header {
@@ -158,124 +188,99 @@ header ul {
   color: #ffe8f6;
 }
 
-/***** 実装サンプル ここから *****/
+/***** 実装サンプル(gallery) ここから *****/
 .flex-samp-parent {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 4%;
+  margin: 0 auto;
 }
 
-.li-samp {
+.flex-samp-child {
   /* background-color: pink; */
-  border-radius: 10px;
-  padding: 0;
-  margin: 5px auto;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .li-samp-item {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 
-.li-img {
+.li-samp-item img {
   max-width: 100%;
-  height: auto;
   display: block;
-  margin: 0 auto;
 }
 
 .li-samp-p {
   padding: 0;
   margin: 0;
   text-align: left;
+  font-size: 12px;
 }
-
 
 /***** お問い合わせ ここから *****/
 /* フォーム */
-.contact-form {
+/* .contact-form {
   margin: 0;
-}
+} */
 
 /* 入力ブロック */
-.form-group {
+.contact-item {
   margin-bottom: 20px;
 }
 
 /* ラベル */
-.form-group label {
+.contact-item label {
   display: block;
-  font-weight: bold;
-  margin-bottom: 6px;
   text-align: left;
 }
 
 /* 必須バッジ */
-.required {
+.contact-badge {
   display: inline-block;
-  background-color: #32839C;
+  background-color: #32839c;
   color: #fff;
-  font-size: 0.75rem;
-  padding: 2px 6px;
-  margin-right: 6px;
   border-radius: 4px;
 }
 
 /* 入力フォーム */
-input,
-textarea {
+input {
   width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-sizing: border-box;
+  height: 40px;
+  border: 1px solid #b7b7b7;
+  border-radius: 10px;
+  /* box-sizing: border-box; */
 }
 
-input:focus,
-textarea:focus {
+/* input:focus {
   outline: none;
   border-color: #333;
-}
-
-/* 送信 */
-.form-submit {
-  margin-top: 24px;
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-button:hover {
-  opacity: 0.85;
-}
-
-
-
+} */
 
 /*************** footer ***************/
+footer {
+  height: 120px;
+  background-color: #8ab3dc;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  padding: 10px;
+}
+
+/* テスト用スタイル */
+.flex-samp-parent {
+  background: red;
+}
+
+.flex-samp-child {
+  background: blue;
+}
 
 /*************** メディアサイズ ***************/
 @media (min-width: 769px) {
   /*************** 汎用部分 ***************/
-  /*************** header ***************/
-  /*************** main ***************/
-  /* main画像切り替え */
-  .main_img {
-    background-image: url("./images/main.jpg");
-    height: 40vh;
-  }
 
+  /*************** header ***************/
   /* headerコンテンツ切り替え */
   .float-h1-right {
     float: right;
@@ -288,6 +293,13 @@ button:hover {
     line-height: 100px;
   }
 
+  /*************** main ***************/
+  /***** main画像切り替え *****/
+  .main_img {
+    background-image: url("./images/main.jpg");
+    height: 40vh;
+  }
+
   .flex-self-parent {
     display: flex;
     flex-direction: row;
@@ -298,24 +310,23 @@ button:hover {
     width: 48%;
   }
 
-
-
+  /***** 実装サンプル(gallery) ここから *****/
   .flex-samp-parent {
+    width: 80%; /* ★ 指示② */
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 2%;
   }
 
-  .li-samp {
-    width: 23.5%; /* 4つ + gap考慮 */
+  .flex-samp-child {
+    width: 25%; /* ★ 指示① */
   }
 
+  .li-samp-item {
+    width: 90%; /* ★ 指示① */
+    margin: 0 auto;
+  }
+  /***** 実装サンプル(gallery) ここまで *****/
 
   /*************** footer ***************/
-
 }
-
-
-
-
-
