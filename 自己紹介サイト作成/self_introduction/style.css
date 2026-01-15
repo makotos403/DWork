@@ -38,11 +38,12 @@ ul {
 h1 {
   color: #fff;
   font-size: clamp(20px, 5vw, 26px);
+  margin-left: 10px;
 }
 
 h2 {
   color: #4b52a7;
-  margin: 50px 0 40px;
+  margin: 50px 0 30px;
 }
 
 h2 span,
@@ -77,11 +78,11 @@ h4 {
 }
 
 .heading-large-main {
-  font-size: 20px;
+  font-size: clamp(20px, 5vw, 24px);
 }
 
 .heading-large-sub {
-  font-size: 12px;
+  font-size: clamp(12px, 5vw, 14px);
 }
 
 .heading-small-main {
@@ -160,10 +161,10 @@ header ul {
 }
 
 /***** 自己紹介 ここから *****/
-/* .self-introduction-box {
-  display: inline-block;  
+.self-introduction-box {
+  max-width: 640px;
+  margin: 0 auto;
 }
-  ●●●●●ココスキ●●●●●● */
 
 .img-self {
   max-width: 100%;
@@ -174,7 +175,7 @@ header ul {
 .self-introduction-text {
   white-space: pre-line;
   text-align: left;
-  font-size: 14px;
+  font-size: clamp(14px, 5vw, 16px);
 }
 
 .flex-self-parent {
@@ -246,35 +247,30 @@ header ul {
 }
 
 /***** お問い合わせ ここから *****/
-/* フォーム */
-/* .contact-form {
-  margin: 0;
-} */
 
-/* 入力ブロック */
 .contact-item {
   margin: 0 auto;
   max-width: 600px;
   margin-bottom: 20px;
+  font-size: clamp(14px, 5vw, 16px);
 }
 
-/* ラベル */
 .contact-item label {
   display: block;
   text-align: left;
 }
 
-/* 必須バッジ */
 .contact-badge {
   display: inline-block;
   background-color: #32839c;
   color: #fff;
   border-radius: 4px;
-  padding: 1px 5px;
+  padding: 3px 4px;
   margin-right: 5px;
+  font-size: 12px;
+  line-height: 1;
 }
 
-/* 入力フォーム */
 input {
   width: 100%;
   height: 40px;
@@ -284,11 +280,6 @@ input {
   box-sizing: border-box;
 }
 
-/* input:focus {
-  outline: none;
-  border-color: #333;
-} */
-
 /*************** footer ***************/
 footer {
   height: 120px;
@@ -296,7 +287,7 @@ footer {
   text-align: center;
   font-size: 16px;
   color: #fff;
-  padding: 10px;
+  padding: 15px 0 0;
 }
 
 /*************** メディアサイズ ***************/

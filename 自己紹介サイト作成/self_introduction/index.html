@@ -177,11 +177,69 @@
         <section class="section">
           <h3 class="h3-title h3-borderbottom">JavaScript課題</h3>
           <div class="form-submit">
-            <button type="submit">実行！</button>
+            <button id="js-btn" type="button">実行！</button>
           </div>
         </section>
       </div>
     </main>
     <footer>Copyright © 2022 Taro Shuro</footer>
+
+    <script>
+      // 課題1 /////////////////////////////////////////////////
+      const people = [
+        { name: "未成年_一郎", age: 16 },
+        { name: "未成年_次郎", age: 19 },
+        { name: "成人_花子", age: 25 },
+        { name: "成人_良子", age: 32 },
+      ];
+
+      document.getElementById("js-btn").addEventListener("click", function () {
+        for (let i = 0; i < people.length; i++) {
+          const person = people[i];
+
+          if (person.age < 20) {
+            console.log(
+              person.name +
+                "さんの年齢は" +
+                person.age +
+                "歳です。20歳まで" +
+                (20 - person.age) +
+                "年です。"
+            );
+          } else {
+            console.log(
+              person.name +
+                "さんの年齢は" +
+                person.age +
+                "歳です。20歳を超えています。"
+            );
+          }
+        }
+      });
+      // 課題2 /////////////////////////////////////////////////
+      const test_nums = [29342, 45342, 23419283, 148458552];
+
+      document.getElementById("js-btn").addEventListener("click", function () {
+        let i = 0;
+
+        while (i < test_nums.length) {
+          const num = test_nums[i];
+
+          const evenOdd = num % 2 === 0 ? "偶数" : "奇数";
+          const remainder = num % 7;
+
+          console.log(
+            num +
+              " は " +
+              evenOdd +
+              " です。7で割ったあまりは " +
+              remainder +
+              " です。"
+          );
+
+          i++;
+        }
+      });
+    </script>
   </body>
 </html>
