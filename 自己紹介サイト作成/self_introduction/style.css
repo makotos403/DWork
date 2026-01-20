@@ -38,6 +38,7 @@ ul {
 h1 {
   color: #fff;
   font-size: clamp(20px, 5vw, 26px);
+  margin: 0; 
   margin-left: 20px;
 }
 
@@ -122,15 +123,6 @@ button {
 /***** ボタン共通 ここまで *****/
 
 /*************** header ***************/
-/* header {
-  background-color: #000000cc;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 48px;
-} */
-
 header {
   background-color: #000000cc;
   position: fixed;
@@ -143,14 +135,8 @@ header {
   align-items: center;
 }
 
-
-
 .heading-taro {
   color: #a6acff;
-}
-
-.float-h1-left {
-  float: left;
 }
 
 header ul {
@@ -208,7 +194,7 @@ header ul {
   background-color: #8ab3dc;
   border-radius: 10px;
   margin: 0;
-  padding: 20px 5px 20px;
+  padding: 20px 10px 20px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -253,7 +239,7 @@ header ul {
 }
 
 .li-samp-item {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -297,7 +283,7 @@ header ul {
 input {
   width: 100%;
   height: 40px;
-  margin: 8px 0;
+  margin: 8px auto 0;
   border: 1px solid #b7b7b7;
   border-radius: 10px;
   box-sizing: border-box;
@@ -328,6 +314,11 @@ footer {
     display: flex;
     align-items: center;
     gap: 40px;
+  }
+
+  .float-h1-left {
+    float: left;
+    line-height: 80px;
   }
 
   .float-h1-right {
@@ -374,14 +365,10 @@ footer {
   }
 
   .li-samp-item {
+    width: 90%;
     margin: 0 auto;
   }
   /***** 実装サンプル(gallery) ここまで *****/
 
   /*************** footer ***************/
-}
-
-/*************** テストカラー ***************/
-.test-color {
-  background-color: red;
 }
