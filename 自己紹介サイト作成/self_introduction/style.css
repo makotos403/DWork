@@ -164,7 +164,6 @@ header ul {
   max-width: 1024px;
   margin: 0 auto;
   text-align: center;
-  /* background-color: rgb(224, 249, 224); */
 }
 
 /***** 自己紹介 ここから *****/
@@ -229,11 +228,9 @@ header ul {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  /* background: red; */
 }
 
 .flex-samp-child {
-  /* background-color: pink; */
   width: 100%;
   margin-bottom: 20px;
 }
@@ -366,7 +363,6 @@ footer {
 
   .li-samp-item {
     width: 90%;
-    margin: 0 auto;
   }
   /***** 実装サンプル(gallery) ここまで *****/
 
