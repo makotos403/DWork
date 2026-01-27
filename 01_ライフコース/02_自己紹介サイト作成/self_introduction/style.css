@@ -38,7 +38,7 @@ ul {
 h1 {
   color: #fff;
   font-size: clamp(20px, 5vw, 26px);
-  margin: 0; 
+  margin: 0;
   margin-left: 20px;
 }
 
@@ -98,7 +98,6 @@ h4 {
 .heading-small-sub {
   font-size: 12px;
 }
-
 /***** 見出しタグ ここまで *****/
 
 /***** ボタン共通 ここから *****/
@@ -119,7 +118,6 @@ button {
 
   box-shadow: 0 4px 0 #818694;
 }
-
 /***** ボタン共通 ここまで *****/
 
 /*************** header ***************/
@@ -129,10 +127,9 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 48px;
+  height: 80px;
 
-  display: flex;
-  align-items: center;
+  display: block;
 }
 
 .heading-taro {
@@ -143,16 +140,38 @@ header ul {
   display: none;
 }
 
+.flex-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.float-h1-left {
+  float: left;
+  line-height: 80px;
+}
+
+.float-h1-right {
+  float: right;
+  height: 80px;
+  margin-right: 20px;
+}
+
+.li-header {
+  color: #fff;
+  text-align: center;
+}
+
 .clear {
   clear: both;
 }
 
 /*************** main ***************/
 .main_img {
-  height: 100vh;
+  height: 40vh;
 
   /* 背景画像を表示 */
-  background-image: url("./images/main_sp.jpg");
+  background-image: url("./images/main.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -185,8 +204,9 @@ header ul {
 
 .flex-self-parent {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 16px;
 }
 
 .flex-self-child {
@@ -194,7 +214,7 @@ header ul {
   border-radius: 10px;
   margin: 0;
   padding: 20px 10px 20px;
-  width: 100%;
+  width: 48%;
   box-sizing: border-box;
 }
 
@@ -224,19 +244,20 @@ header ul {
 
 /***** 実装サンプル(gallery) ここから *****/
 .flex-samp-parent {
-  width: 80%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin: 0 auto;
 }
 
 .flex-samp-child {
-  width: 100%;
+  width: 25%;
   margin-bottom: 20px;
 }
 
 .li-samp-item {
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -251,9 +272,9 @@ header ul {
   text-align: left;
   font-size: 12px;
 }
+/***** 実装サンプル(gallery) ここまで *****/
 
 /***** お問い合わせ ここから *****/
-
 .contact-item {
   margin: 0 auto;
   max-width: 600px;
@@ -296,75 +317,43 @@ footer {
   padding-top: 20px;
 }
 
-/*************** メディアサイズ ***************/
+/*************** メディアサイズ（768px以下） ***************/
 @media (max-width: 768px) {
-  /*************** 汎用部分 ***************/
-
   /*************** header ***************/
-
   header {
-    display: block;
-    height: 80px;
-  }
+    height: 48px;
 
-  .flex-header {
     display: flex;
     align-items: center;
-    gap: 40px;
-  }
-
-  .float-h1-left {
-    float: left;
-    line-height: 80px;
-  }
-
-  .float-h1-right {
-    float: right;
-    height: 80px;
-    margin-right: 20px;
-  }
-
-  .li-header {
-    color: #fff;
-    text-align: center;
   }
 
   /*************** main ***************/
-  /***** main画像切り替え *****/
   .main_img {
-    background-image: url("./images/main.jpg");
-    background-position: center;
-    background-size: cover;
-    height: 40vh;
+    height: 100vh;
+    background-image: url("./images/main_sp.jpg");
   }
 
   .flex-self-parent {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    gap: 16px;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .flex-self-child {
-    width: 48%;
+    width: 100%;
   }
 
   /***** 実装サンプル(gallery) ここから *****/
   .flex-samp-parent {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
+    width: 80%;
+    flex-direction: column;
   }
 
   .flex-samp-child {
-    width: 25%;
+    width: 100%;
   }
 
   .li-samp-item {
-    width: 90%;
+    width: 100%;
   }
   /***** 実装サンプル(gallery) ここまで *****/
-
-  /*************** footer ***************/
 }

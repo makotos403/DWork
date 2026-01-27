@@ -297,11 +297,10 @@ footer {
 }
 
 /*************** メディアサイズ ***************/
-@media (max-width: 768px) {
+@media (min-width: 769px) {
   /*************** 汎用部分 ***************/
 
   /*************** header ***************/
-
   header {
     display: block;
     height: 80px;
