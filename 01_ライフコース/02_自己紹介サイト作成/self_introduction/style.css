@@ -22,6 +22,7 @@ html {
   text-decoration: none;
   color: inherit;
 }
+
 /***** ノーマライズ ここまで *****/
 
 ul {
@@ -44,7 +45,8 @@ h1 {
 
 h2 {
   color: #4b52a7;
-  margin: 80px 0 0; /* 下のマージンは相手側で合わせる */
+  margin: 80px 0 0;
+  /* 下のマージンは相手側で合わせる */
 }
 
 h2 span,
@@ -98,6 +100,7 @@ h4 {
 .heading-small-sub {
   font-size: 12px;
 }
+
 /***** 見出しタグ ここまで *****/
 
 /***** ボタン共通 ここから *****/
@@ -118,6 +121,7 @@ button {
 
   box-shadow: 0 4px 0 #818694;
 }
+
 /***** ボタン共通 ここまで *****/
 
 /*************** header ***************/
@@ -136,8 +140,16 @@ header {
   color: #a6acff;
 }
 
-header ul {
-  display: none;
+.float-h1-left {
+  float: left;
+  height: 80px;
+  line-height: 80px;
+}
+
+.float-h1-right {
+  float: right;
+  height: 80px;
+  padding: 0 20px;
 }
 
 .flex-header {
@@ -146,25 +158,11 @@ header ul {
   gap: 40px;
 }
 
-.float-h1-left {
-  float: left;
-  line-height: 80px;
-}
-
-.float-h1-right {
-  float: right;
-  height: 80px;
-  margin-right: 20px;
-}
-
 .li-header {
   color: #fff;
   text-align: center;
 }
 
-.clear {
-  clear: both;
-}
 
 /*************** main ***************/
 .main_img {
@@ -272,6 +270,7 @@ header ul {
   text-align: left;
   font-size: 12px;
 }
+
 /***** 実装サンプル(gallery) ここまで *****/
 
 /***** お問い合わせ ここから *****/
@@ -319,12 +318,28 @@ footer {
 
 /*************** メディアサイズ（768px以下） ***************/
 @media (max-width: 768px) {
+
   /*************** header ***************/
   header {
     height: 48px;
-
     display: flex;
     align-items: center;
+  }
+
+  .float-h1-left {
+    height: 48px;
+    line-height: 48px;
+  }
+  
+  .float-h1-right {
+    height: 48px;
+    line-height: 48px;
+    display: none;
+  }
+
+
+  .clear {
+    clear: both;
   }
 
   /*************** main ***************/
@@ -355,5 +370,6 @@ footer {
   .li-samp-item {
     width: 100%;
   }
+
   /***** 実装サンプル(gallery) ここまで *****/
 }
