@@ -1,14 +1,11 @@
 /*************** 汎用部分 ***************/
 
-/***** ノーマライズ ここから *****/
+
+/***** Reset CSS ここから *****/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-html,
-body {
   margin: 0;
   padding: 0;
 }
@@ -18,18 +15,37 @@ html {
   font-size: 16px;
 }
 
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .link-reset {
   text-decoration: none;
   color: inherit;
 }
 
-/***** ノーマライズ ここまで *****/
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+/***** Reset CSS ここまで *****/
 
 .flex {
   display: flex;
@@ -113,6 +129,7 @@ button {
   max-width: 300px;
   height: 40px;
   padding: 12px;
+  font: inherit;
   color: #fff;
 
   background-color: #8ab3dc;
@@ -161,6 +178,7 @@ header {
 .li-header {
   color: #fff;
   text-align: center;
+  font-weight: bold;
 }
 
 
@@ -233,11 +251,13 @@ header {
 .li-fav {
   color: #feffc7;
   font-size: 16px;
+  font-weight: bold;
 }
 
 .li-web {
   color: #ffe8f6;
   font-size: 16px;
+  font-weight: bold;
 }
 
 /***** 実装サンプル(gallery) ここから *****/
@@ -304,6 +324,7 @@ input {
   border: 1px solid #b7b7b7;
   border-radius: 10px;
   box-sizing: border-box;
+  font: inherit;
 }
 
 /*************** footer ***************/
@@ -330,7 +351,7 @@ footer {
     height: 48px;
     line-height: 48px;
   }
-  
+
   .float-h1-right {
     height: 48px;
     line-height: 48px;
